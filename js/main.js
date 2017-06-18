@@ -18,16 +18,38 @@ function agregaPosteo() {
 
   // Paso 1. Rescatamos el contenedor-posteos, el nombre y el
   //   comentario del usuario
-  var containerPosteos = document.getElementById("contenedor-posteos");
+  
   var nombreFF = document.getElementById("nombre").value;
   var contenidoFF = document.getElementById("cajaposteos").value;
-
+  sessionStorage.setItem(nombreFF,contenidoFF);
   // Es el elemento que creamos. Es donde irá nuestro post
-  var nuevoPost = document.createElement("div");
+  /*
 
-  // Ahora veamos donde metemos esos valores
+ESTA PARTE ES MIA -------------------------
+*/
+
+for (var i = 0; i <sessionStorage.length; i++) {
+  var nuevoPost = document.createElement("div");
   var contenedorNombre = document.createElement("h2");
   var contenedorPost = document.createElement("p");
+  var containerPosteos = document.getElementById("contenedor-posteos");
+  
+  var nodoNombre = document.createTextNode(nombreFF);
+  var nodoPosteo = document.createTextNode(contenidoFF);
+
+  var nombreFF=sessionStorage.key(i);
+  var contenidoFF= sessionStorage.getItem(nombreFF);
+  contenedorNombre.appendChild(nodoNombre);
+  contenedorPost.appendChild(nodoPosteo);
+
+  nuevoPost.appendChild(contenedorNombre);
+  nuevoPost.appendChild(contenedorPost);
+  nuevoPost.setAttribute("class", "posteo");
+  containerPosteos.appendChild(nuevoPost);
+
+}
+  // Ahora veamos donde metemos esos valores
+  
  // var separacíon = document.createElement("hr");
   // crear elementos el corazon
  /* var parrafCorazon = document.createElement('p');
@@ -41,7 +63,7 @@ function agregaPosteo() {
   i.setAttribute("arial-hidden", "true");*/
 
   // Ahora hay que transformar el nombre a nodo de texto
-  var nodoNombre = document.createTextNode(nombreFF);
+  /*var nodoNombre = document.createTextNode(nombreFF);
   var nodoPosteo = document.createTextNode(contenidoFF);
 
   // Ahora metemos esos nodos de texto a los elementos que ya creamos
@@ -65,7 +87,7 @@ function agregaPosteo() {
   nuevoPost.setAttribute("class", "posteo");
   containerPosteos.appendChild(nuevoPost);
 
-  // Resetear los campos a blanco
+  // Resetear los campos a blanco*/
   document.getElementById("nombre").value = "";
   document.getElementById("cajaposteos").value = "";
 }
