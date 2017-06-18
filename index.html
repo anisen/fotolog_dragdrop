@@ -39,7 +39,7 @@
       </div>
       <div class="col-md-2 ff">
         <a href="" class="fotos">Fotos Favoritas</a>
-        <div class="marco-foto" ondragover="permiteDrop(event)" ondrop="drop(event)"></div>
+        <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
         <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
         <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
       </div>
@@ -53,8 +53,8 @@
           <input id="nombre" type="text" placeholder="nombre">
           <strong>Comentario:</strong>
           <textarea name="comentario" id="cajaposteos" cols="10" rows="5" placeholder="Comentario"></textarea>
-          <button onclick="agregaPosteo()" id="boton-guardar">Guardar</button>
-
+          <button onclick="agregaPosteo()" class="boton-guardar">Guardar</button>
+          <button class="boton-guardar">Limpiar Datos</button>
           <div id="contenedor-posteos" class="text-left">
             <!--
             <div class="posteo">
