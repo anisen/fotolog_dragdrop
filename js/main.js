@@ -19,26 +19,22 @@ function agregaPosteo() {
   // Paso 1. Rescatamos el contenedor-posteos, el nombre y el
   //   comentario del usuario
   
-  var nombreFF = document.getElementById("nombre").value;
-  var contenidoFF = document.getElementById("cajaposteos").value;
-  sessionStorage.setItem(nombreFF,contenidoFF);
+  localStorage.nombreFF = document.getElementById("nombre").value;
+  localStorage.contenidoFF = document.getElementById("cajaposteos").value;
   // Es el elemento que creamos. Es donde irá nuestro post
   /*
 
 ESTA PARTE ES MIA -------------------------
 */
-
-for (var i = 0; i <sessionStorage.length; i++) {
+if ((localStorage.nombreFF!= undefined)&& (localStorage.contenidoFF!= undefined)) {
   var nuevoPost = document.createElement("div");
   var contenedorNombre = document.createElement("h2");
   var contenedorPost = document.createElement("p");
   var containerPosteos = document.getElementById("contenedor-posteos");
   
-  var nodoNombre = document.createTextNode(nombreFF);
-  var nodoPosteo = document.createTextNode(contenidoFF);
+  var nodoNombre = document.createTextNode(localStorage.nombreFF);
+  var nodoPosteo = document.createTextNode(localStorage.contenidoFF);
 
-  var nombreFF=sessionStorage.key(i);
-  var contenidoFF= sessionStorage.getItem(nombreFF);
   contenedorNombre.appendChild(nodoNombre);
   contenedorPost.appendChild(nodoPosteo);
 
@@ -46,7 +42,10 @@ for (var i = 0; i <sessionStorage.length; i++) {
   nuevoPost.appendChild(contenedorPost);
   nuevoPost.setAttribute("class", "posteo");
   containerPosteos.appendChild(nuevoPost);
-
+}else{
+  var mensaje=("Intrdusca su informacion");
+  var nodoMensaje
+  containerPosteos.appendChild(mensaje);
 }
   // Ahora veamos donde metemos esos valores
   
