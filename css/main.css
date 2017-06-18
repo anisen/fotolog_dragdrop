@@ -1,14 +1,19 @@
 body {
-  background-color: white;
-  color:black;
+  background-color: black;
+  color: #782CB5;
 }
 
 header {
   margin-top: 20px;
 }
+.logo{
+  background-color: white;
+  border-radius: 8px;
+}
 img {
   width: 100%;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 a {
@@ -21,7 +26,7 @@ a {
   height: 100px;
 }
 h1, p{
-  color: DeepPink ;
+  color: #782CB5;
 }
 h1{
   font-size: 50px;
@@ -30,21 +35,34 @@ h1{
 
 textarea, input{
   width: 100%;
-  border-radius: 0px;
-  border: 1px solid DeepPink;
+  border-radius: 10px;
+  border: 3px solid purple;
   margin-bottom: 20px;
+  border-style: none;
+  padding: 6px;
 }
-
+strong{
+  margin-right: 600px;
+  font-size: 30px;
+  text-align: left;
+}
 .posteo {
-  color: DeepPink;
+  color: #e74bb4;
+  background-color: #f892e7;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.posteo h2{
+  color: black;
 }
 .posteo strong{
   display: block;
 }
-.posteo hr {
+/*.posteo hr {
   border: 1px solid DeepPink;
 }
-/* PARA CORAZON */
+ PARA CORAZON 
 .corazon {
   font-size: 40px;
   color: gray;
@@ -52,11 +70,19 @@ textarea, input{
 }
 .rojo {
   color: red;
-}
+}*/
 
 /* PARA EJERCICIO HTML5 */
 .marco-foto {
   min-height: 150px;
-  border: 2px solid black;
+  border: 3px solid green;
   margin-top: 20px;
+}
+#boton-guardar{
+  width: 150px;
+  height: 40px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: orange;
+  font-size: 20px;
 }

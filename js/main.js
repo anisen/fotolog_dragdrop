@@ -26,11 +26,11 @@ function agregaPosteo() {
   var nuevoPost = document.createElement("div");
 
   // Ahora veamos donde metemos esos valores
-  var contenedorNombre = document.createElement("strong");
+  var contenedorNombre = document.createElement("h2");
   var contenedorPost = document.createElement("p");
-  var separacíon = document.createElement("hr");
+ // var separacíon = document.createElement("hr");
   // crear elementos el corazon
-  var parrafCorazon = document.createElement('p');
+ /* var parrafCorazon = document.createElement('p');
   var i = document.createElement('i');
 
   parrafCorazon.appendChild(i);
@@ -38,10 +38,10 @@ function agregaPosteo() {
   // set attributos del corazon
   parrafCorazon.setAttribute("class", "corazon");
   i.setAttribute("class", "fa fa-heart");
-  i.setAttribute("arial-hidden", "true");
+  i.setAttribute("arial-hidden", "true");*/
 
   // Ahora hay que transformar el nombre a nodo de texto
-  var nodoNombre = document.createTextNode(nombreFF + " escribió:");
+  var nodoNombre = document.createTextNode(nombreFF);
   var nodoPosteo = document.createTextNode(contenidoFF);
 
   // Ahora metemos esos nodos de texto a los elementos que ya creamos
@@ -52,14 +52,14 @@ function agregaPosteo() {
   // Ahora agregamos el nombre y el contenido del posteo al post
   nuevoPost.appendChild(contenedorNombre);
   nuevoPost.appendChild(contenedorPost);
-  nuevoPost.appendChild(parrafCorazon);
-  nuevoPost.appendChild(separacíon);
+  //nuevoPost.appendChild(parrafCorazon);
+  //nuevoPost.appendChild(separacíon);
 
   // evento click en el corazon
-  i.addEventListener("click", function(){
+  //i.addEventListener("click", function(){
     // al elemento i se le pasa la clase rojo
-    i.classList.toggle('rojo');
-  });
+  //  i.classList.toggle('rojo');
+ // });
 
   // Finalmente, le damos atributos a nuestro post y lo metemos en el contenedor de posteos
   nuevoPost.setAttribute("class", "posteo");
